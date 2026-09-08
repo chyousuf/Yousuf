@@ -273,20 +273,48 @@
   /* ===== Project Filter ===== */
   var filterBtns = document.querySelectorAll('.filter-btn');
   var projectCards = document.querySelectorAll('.project-card');
+  var loadMoreProjects = document.getElementById('load-more-projects');
+  var activeProjectFilter = 'all';
+  var visibleProjectCount = 6;
+
+  function updateVisibleProjects() {
+    var matchingProjects = [];
+    projectCards.forEach(function (card) {
+      if (activeProjectFilter === 'all' || card.getAttribute('data-category') === activeProjectFilter) {
+        matchingProjects.push(card);
+      }
+    });
+
+    matchingProjects.forEach(function (card, index) {
+      card.classList.toggle('hidden', index >= visibleProjectCount);
+    });
+    projectCards.forEach(function (card) {
+      if (matchingProjects.indexOf(card) === -1) card.classList.add('hidden');
+    });
+
+    if (loadMoreProjects) {
+      loadMoreProjects.hidden = matchingProjects.length <= visibleProjectCount;
+    }
+  }
+
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var filter = this.getAttribute('data-filter');
+      activeProjectFilter = this.getAttribute('data-filter');
+      visibleProjectCount = 6;
       filterBtns.forEach(function (b) { b.classList.remove('active'); });
       this.classList.add('active');
-      projectCards.forEach(function (card) {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      updateVisibleProjects();
     });
   });
+
+  if (loadMoreProjects) {
+    loadMoreProjects.addEventListener('click', function () {
+      visibleProjectCount += 6;
+      updateVisibleProjects();
+    });
+  }
+
+  updateVisibleProjects();
 
   /* ===== GLITCH TEXT - Set data-text attribute ===== */
   document.querySelectorAll('.glitch-text').forEach(function (el) {

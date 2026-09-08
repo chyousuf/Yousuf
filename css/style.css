@@ -238,6 +238,8 @@ ul{list-style:none}
 .project-title{font-size:1.1rem;font-weight:600;color:var(--text-100);margin-bottom:.35rem;position:relative;display:inline-block}
 .project-desc{font-size:.85rem;color:var(--text-60);margin-bottom:.75rem;line-height:1.5}
 .project-card.hidden{display:none}
+.project-load-more{display:flex;justify-content:center;margin-top:2.5rem}
+.project-load-more-btn{display:inline-flex;align-items:center;gap:.65rem}
 
 /* ===== GLITCH RGB SPLIT on project titles (text-shadow) ===== */
 .glitch-text{position:relative;cursor:default;transition:text-shadow .15s ease}
