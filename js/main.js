@@ -550,3 +550,11 @@
   }
 
 })();
+
+// Touch and keyboard users can toggle the same alternate view as hover users.
+document.querySelectorAll('.project-preview').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var alternate = button.classList.toggle('is-alternate');
+    button.setAttribute('aria-pressed', String(alternate));
+  });
+});
