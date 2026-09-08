@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yousuf Javaid — UI/UX & Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <!-- PARTICLE CANVAS -->
+    <canvas class="particle-canvas" id="particle-canvas"></canvas>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo"><span class="logo-text">Yousuf</span><span class="logo-dot">.</span></a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home" class="mobile-link">Home</a><a href="#skills" class="mobile-link">Skills</a><a
+                href="#experience" class="mobile-link">Experience</a><a href="#education"
+                class="mobile-link">Education</a><a href="#projects" class="mobile-link">Projects</a><a href="#contact"
+                class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <!-- CSS Morphing Blob -->
+        <div class="hero-blob-css"></div>
+        <!-- Morphing Blob Background -->
+        <div class="hero-blob-container">
+            <svg class="hero-blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#38b2ac;stop-opacity:0.3" />
+                        <stop offset="50%" style="stop-color:#4a0087;stop-opacity:0.25" />
+                        <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.2" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#blobGrad)">
+                    <animate attributeName="d" dur="12s" repeatCount="indefinite"
+                        values="M300,520C420,520,520,420,520,300C520,180,420,80,300,80C180,80,80,180,80,300C80,420,180,520,300,520Z;M300,540C440,540,560,400,540,280C520,160,400,60,280,80C160,100,40,200,60,320C80,440,160,540,300,540Z;M300,500C400,520,540,440,520,300C500,160,440,60,300,80C160,100,60,180,80,300C100,420,200,480,300,500Z;M300,520C420,520,520,420,520,300C520,180,420,80,300,80C180,80,80,180,80,300C80,420,180,520,300,520Z" />
+                </path>
+            </svg>
+        </div>
+        <div class="hero-blob-container hero-blob-2-container">
+            <svg class="hero-blob hero-blob-2" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blobGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4a0087;stop-opacity:0.2" />
+                        <stop offset="100%" style="stop-color:#38b2ac;stop-opacity:0.15" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#blobGrad2)">
+                    <animate attributeName="d" dur="15s" repeatCount="indefinite"
+                        values="M300,520C420,520,520,420,520,300C520,180,420,80,300,80C180,80,80,180,80,300C80,420,180,520,300,520Z;M320,540C460,500,560,380,520,260C480,140,380,40,260,80C140,120,40,220,60,340C80,460,180,580,320,540Z;M280,500C380,540,540,460,540,320C540,180,460,60,320,60C180,60,60,160,60,300C60,440,180,460,280,500Z;M300,520C420,520,520,420,520,300C520,180,420,80,300,80C180,80,80,180,80,300C80,420,180,520,300,520Z" />
+                </path>
+            </svg>
+        </div>
+
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <p class="hero-greeting split-reveal" data-split="chars">Hi, I'm</p>
+                <h1 class="hero-name split-reveal" data-split="chars">Yousuf <span class="text-accent">Javaid</span></h1>
+                <h2 class="hero-subtitle"><span class="subtitle-word">UI/UX</span><span
+                        class="subtitle-word">&amp;</span><span class="subtitle-word">Product</span><span
+                        class="subtitle-word">Designer</span></h2>
+                <p class="hero-tagline">Creating engaging, intuitive experiences for mobile and web — blending
+                    creativity with usability.</p>
+                <div class="hero-contact">
+                    <span><i class="fa-solid fa-phone"></i> +92 324 5757508</span>
+                    <span><i class="fa-solid fa-envelope"></i> yousufjavaid29@gmail.com</span>
+                    <span><i class="fa-solid fa-globe"></i> <a href="#" class="hero-link">Portfolio</a></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary magnetic-el"><span class="btn-liquid"></span>View
+                        Projects</a>
+                    <a href="#contact" class="btn btn-outline magnetic-el"><span class="btn-liquid"></span>Contact
+                        Me</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-ring">
+                    <img src="https://picsum.photos/id/1027/400/400" alt="Yousuf Javaid" class="hero-image">
+                    <div class="profile-particles" id="profile-particles"></div>
+                </div>
+                <div class="hero-badge">
+                    <span class="hero-badge-number" id="badge-counter">0+</span>
+                    <span class="hero-badge-text">Years<br>Experience</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"><i class="fa-solid fa-chevron-down"></i></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title clip-reveal">Skills &amp; Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="card skill-card scroll-reveal">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="card-title">Design Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag wave-tag">UI/UX Design</span><span
+                            class="skill-tag wave-tag">Prototyping</span><span class="skill-tag wave-tag">UX
+                            Research</span><span class="skill-tag wave-tag">Interaction Design</span><span
+                            class="skill-tag wave-tag">Visual Design</span><span class="skill-tag wave-tag">Information
+                            Architecture</span><span class="skill-tag wave-tag">User Testing</span><span
+                            class="skill-tag wave-tag">Design Systems</span>
+                    </div>
+                </div>
+                <div class="card skill-card scroll-reveal">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="card-title">Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag wave-tag">Critical Thinking</span><span
+                            class="skill-tag wave-tag">Project Management</span><span
+                            class="skill-tag wave-tag">Communication</span>
+                    </div>
+                    <h4 class="skill-sub">Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag wave-tag">English</span><span class="skill-tag wave-tag">Urdu</span>
+                    </div>
+                </div>
+                <div class="card skill-card tools-card scroll-reveal">
+                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3 class="card-title">Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item"><span class="tool-name">Figma</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="95"></div>
+                            </div><span class="tool-pct">95%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Adobe XD</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div><span class="tool-pct">85%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Sketch</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div><span class="tool-pct">80%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Photoshop</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="90"></div>
+                            </div><span class="tool-pct">90%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Illustrator</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div><span class="tool-pct">85%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Invision</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div><span class="tool-pct">85%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Framer</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div><span class="tool-pct">80%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Proto.io</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="70"></div>
+                            </div><span class="tool-pct">70%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Balsamiq</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="95"></div>
+                            </div><span class="tool-pct">95%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Miro</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div><span class="tool-pct">80%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Jira</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div><span class="tool-pct">85%</span>
+                        </div>
+                        <div class="tool-item"><span class="tool-name">Trello</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div><span class="tool-pct">80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title clip-reveal">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item timeline-left scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card card">
+                        <span class="exp-company">Creative Studio</span>
+                        <span class="exp-duration">2023 — Present</span>
+                        <h3 class="exp-role">Senior UI/UX Designer</h3>
+                        <ul class="exp-bullets">
+                            <li>Led redesign of flagship product, improving user retention by 35%</li>
+                            <li>Built and maintained a scalable design system across 4 product lines</li>
+                            <li>Conducted user research sessions with 50+ participants</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card card">
+                        <span class="exp-company">Tech Agency</span>
+                        <span class="exp-duration">2021 — 2023</span>
+                        <h3 class="exp-role">UI/UX Designer</h3>
+                        <ul class="exp-bullets">
+                            <li>Designed mobile and web interfaces for 15+ client projects</li>
+                            <li>Created interactive prototypes and high-fidelity mockups</li>
+                            <li>Collaborated with developers to ensure pixel-perfect implementation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card card">
+                        <span class="exp-company">Startup Inc.</span>
+                        <span class="exp-duration">2019 — 2021</span>
+                        <h3 class="exp-role">Junior Product Designer</h3>
+                        <ul class="exp-bullets">
+                            <li>Designed user flows and wireframes for an early-stage SaaS platform</li>
+                            <li>Assisted in usability testing and iteration cycles</li>
+                            <li>Contributed to brand identity and marketing collateral</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title clip-reveal">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="card edu-card scroll-reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <h3 class="edu-degree">BS in Computer Science</h3>
+                        <p class="edu-school">National University</p>
+                        <p class="edu-year">2015 — 2019</p>
+                    </div>
+                </div>
+                <div class="card edu-card scroll-reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div>
+                        <h3 class="edu-degree">Google UX Design Certificate</h3>
+                        <p class="edu-school">Coursera / Google</p>
+                        <p class="edu-year">2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title clip-reveal">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="filter-buttons scroll-reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card scroll-reveal" data-category="mobile">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/1/600/400" alt="Fitness App" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="Fitness Tracker App">Fitness Tracker App</h3>
+                        <p class="project-desc">A mobile fitness app with workout tracking, meal plans, and progress
+                            analytics.</p>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal" data-category="web">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/180/600/400" alt="E-commerce" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="E-Commerce Platform">E-Commerce Platform</h3>
+                        <p class="project-desc">Full-stack e-commerce redesign with improved checkout flow and product
+                            discovery.</p>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal" data-category="branding">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/366/600/400" alt="Brand Identity" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="Brand Identity System">Brand Identity System
+                        </h3>
+                        <p class="project-desc">Complete brand identity including logo, typography, color system, and
+                            guidelines.</p>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal" data-category="mobile">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/48/600/400" alt="Banking App" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="Banking Dashboard">Banking Dashboard</h3>
+                        <p class="project-desc">A modern banking app dashboard with real-time transactions and budgeting
+                            tools.</p>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal" data-category="web">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/60/600/400" alt="SaaS Dashboard" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="SaaS Analytics Dashboard">SaaS Analytics
+                            Dashboard</h3>
+                        <p class="project-desc">Data-rich analytics dashboard with interactive charts and real-time
+                            reporting.</p>
+                    </div>
+                </div>
+                <div class="project-card scroll-reveal" data-category="branding">
+                    <div class="project-image-wrapper">
+                        <img src="https://picsum.photos/id/24/600/400" alt="Travel App" class="project-image">
+                        <div class="project-overlay"><a href="#" class="btn btn-small">View Project</a></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title glitch-text" data-text="Travel Booking App">Travel Booking App</h3>
+                        <p class="project-desc">End-to-end travel booking experience with itinerary planning and social
+                            sharing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title clip-reveal">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <div class="contact-card card">
+                        <h3 class="contact-card-title">Contact Info</h3>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+92 324 5757508</span></div>
+                        <div class="contact-item"><i
+                                class="fa-solid fa-envelope"></i><span>yousufjavaid29@gmail.com</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Islamabad,
+                                Pakistan</span></div>
+                    </div>
+                    <div class="contact-card card">
+                        <h3 class="contact-card-title">Social Links</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Behance"><i
+                                    class="fa-brands fa-behance"></i></a>
+                            <a href="#" class="social-link" aria-label="Dribbble"><i
+                                    class="fa-brands fa-dribbble"></i></a>
+                            <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper scroll-reveal">
+                    <form class="contact-form card" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full magnetic-el"><span
+                                class="btn-liquid"></span><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path class="wave-path" d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,75 1440,60 L1440,120 L0,120 Z">
+                </path>
+            </svg>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="logo footer-logo"><span class="logo-text">Yousuf</span><span
+                        class="logo-dot">.</span></a>
+                <p class="footer-desc">Creating engaging, intuitive experiences for mobile and web — blending creativity
+                    with usability.</p>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="Dribbble"><i
+                            class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Contact</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fa-solid fa-phone"></i> +92 324 5757508</li>
+                    <li><i class="fa-solid fa-envelope"></i> yousufjavaid29@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Islamabad, Pakistan</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Newsletter</h4>
+                <p class="footer-newsletter-text">Subscribe to get updates on my latest work and design insights.</p>
+                <form class="footer-newsletter" id="newsletter-form">
+                    <input type="email" class="footer-newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="footer-newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2025 Yousuf Javaid. All rights reserved.</p>
+            <p class="footer-credits">Made with <span class="heart-icon"><i class="fa-solid fa-heart"></i></span> by
+                Yousuf Javaid</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
