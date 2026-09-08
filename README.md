@@ -17,7 +17,8 @@ git status
 git diff
 git add index.html css/style.css js/main.js assets/Muhammad_Yousuf_CV.pdf
 git commit -m "Describe the update"
+git push
 git log --oneline
 ```
 
-History is stored locally. No remote repository or online backup is configured.
+History is stored locally and on GitHub at https://github.com/chyousuf/YousufCv-custom-website. The `origin` remote points to this repository, and `main` tracks `origin/main`. Commit and push future changes to update the online backup. Website hosting is separate from this Git repository.
