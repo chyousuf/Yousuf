@@ -39,6 +39,10 @@ ul{list-style:none}
 .logo-text{color:var(--text-100)}
 .logo-dot{color:var(--accent-400);font-size:2rem;line-height:0;animation:pulseDot 2.5s var(--ease-spring) infinite}
 @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.header-heading{display:flex;flex-direction:column;margin:0 auto 0 .85rem;padding-left:.85rem;border-left:1px solid rgba(255,255,255,.15);line-height:1.15;opacity:0;transform:translateY(-8px);animation:headerHeadingIn .7s var(--ease-out-expo) .25s forwards}
+.header-heading span{color:var(--text-100);font-size:.8rem;font-weight:700;letter-spacing:.01em}
+.header-heading small{margin-top:.18rem;color:var(--accent-400);font-size:.63rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+@keyframes headerHeadingIn{to{opacity:1;transform:translateY(0)}}
 
 /* ===== NAV LINKS ===== */
 .nav{display:flex;gap:2rem}
@@ -347,6 +351,7 @@ ul{list-style:none}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
+  .header-heading{display:none}
   .hero-inner{grid-template-columns:1fr;text-align:center;gap:2.5rem}
   .hero-content{order:2}.hero-image-wrapper{order:1}
   .hero-tagline{margin-left:auto;margin-right:auto}
