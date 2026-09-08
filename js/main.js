@@ -324,7 +324,6 @@
   /* ===== Contact Form ===== */
   var form = document.getElementById('contact-form');
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
     var inputs = form.querySelectorAll('[required]');
     var valid = true;
     inputs.forEach(function (input) {
@@ -334,10 +333,7 @@
         setTimeout(function () { input.classList.remove('form-shake'); }, 500);
       }
     });
-    if (!valid) return;
-    var subject = document.getElementById('subject').value.trim() || 'Website enquiry';
-    var body = 'Name: ' + document.getElementById('name').value.trim() + '\nEmail: ' + document.getElementById('email').value.trim() + '\n\n' + document.getElementById('message').value.trim();
-    window.location.href = 'mailto:ch.yousuf.javaid@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    if (!valid) e.preventDefault();
   });
 
   /* ===== Staggered scroll-reveal delays ===== */
