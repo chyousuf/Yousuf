@@ -21,4 +21,4 @@ git push
 git log --oneline
 ```
 
-History is stored locally and on GitHub at https://github.com/chyousuf/YousufCv-custom-website. The `origin` remote points to this repository, and `main` tracks `origin/main`. Commit and push future changes to update the online backup. The live website is hosted free on GitHub Pages at https://chyousuf.github.io/YousufCv-custom-website/. Changes pushed to `main` publish automatically. HTTPS is enforced. The free address is a GitHub subdomain and project path, not a separately registered domain.
+History is stored locally and on GitHub at https://github.com/chyousuf/Yousuf. The `origin` remote points to this repository, and `main` tracks `origin/main`. Commit and push future changes to update the online backup. The live website is hosted free on GitHub Pages at https://chyousuf.github.io/Yousuf/. Changes pushed to `main` publish automatically. HTTPS is enforced. The free address is a GitHub subdomain and project path, not a separately registered domain.
