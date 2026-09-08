@@ -35,10 +35,11 @@ ul{list-style:none}
 .header{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(26,26,46,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.04);transition:box-shadow var(--transition),background var(--transition)}
 .header.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.4);background:rgba(26,26,46,.97)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{display:flex;align-items:baseline;font-size:1.5rem;font-weight:700}
+.logo{display:inline-flex;align-items:center;gap:.55rem;font-size:1.5rem;font-weight:700}
+.logo-mark{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;filter:drop-shadow(0 3px 8px rgba(56,178,172,.28));transition:transform .4s var(--ease-spring)}
+.logo-mark svg{width:100%;height:100%;overflow:visible}.logo-mark circle{fill:rgba(56,178,172,.1);stroke:rgba(56,178,172,.45);stroke-width:1.5}.logo-mark-left,.logo-mark-right{fill:none;stroke-linecap:round;stroke-linejoin:round}.logo-mark-left{stroke:var(--accent-400);stroke-width:4}.logo-mark-right{stroke:#a855f7;stroke-width:4}
+.logo:hover .logo-mark{transform:rotate(-8deg) scale(1.12)}
 .logo-text{color:var(--text-100)}
-.logo-dot{color:var(--accent-400);font-size:2rem;line-height:0;animation:pulseDot 2.5s var(--ease-spring) infinite}
-@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
 
 /* ===== NAV LINKS ===== */
 .nav{display:flex;gap:2rem}
@@ -296,7 +297,7 @@ ul{list-style:none}
 .footer-wave svg{width:100%;height:80px;display:block}
 .wave-path{fill:var(--primary-800);animation:waveMove 10s ease-in-out infinite}
 @keyframes waveMove{0%,100%{d:path('M0,60 C360,120 720,0 1080,60 C1260,90 1380,75 1440,60 L1440,120 L0,120 Z')}50%{d:path('M0,40 C360,0 720,100 1080,40 C1260,10 1380,60 1440,40 L1440,120 L0,120 Z')}}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:2.5rem;padding:4rem 1.5rem 2rem;max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding:4rem 1.5rem 2rem;max-width:1280px;margin:0 auto}
 .footer-col-title{font-size:1rem;font-weight:600;color:var(--text-100);margin-bottom:1.25rem;position:relative;padding-bottom:.6rem}
 .footer-col-title::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:linear-gradient(90deg,var(--accent-400),#a855f7);border-radius:1px;transition:width .5s var(--ease-out-expo)}
 .footer-col:hover .footer-col-title::after{width:60px}
