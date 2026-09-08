@@ -198,6 +198,12 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          if (entry.target.classList.contains('section-header')) {
+            var title = entry.target.querySelector('.section-title.clip-reveal');
+            var line = entry.target.querySelector('.section-line');
+            if (title) title.classList.add('revealed');
+            if (line) line.classList.add('revealed');
+          }
           revealObserver.unobserve(entry.target);
         }
       });
