@@ -191,6 +191,18 @@
     sectionLines.forEach(function (el) { el.classList.add('revealed'); });
   }
 
+  /* ===== Reliable section heading reveal ===== */
+  function revealSectionHeadings() {
+    document.querySelectorAll('.section-header').forEach(function (header) {
+      if (header.classList.contains('heading-revealed')) return;
+      if (header.getBoundingClientRect().top < window.innerHeight * 0.85) {
+        header.classList.add('heading-revealed');
+      }
+    });
+  }
+  revealSectionHeadings();
+  window.addEventListener('scroll', throttle(revealSectionHeadings, 100), { passive: true });
+
   /* ===== Scroll Reveal (Intersection Observer) ===== */
   var revealElements = document.querySelectorAll('.scroll-reveal');
   if ('IntersectionObserver' in window) {
