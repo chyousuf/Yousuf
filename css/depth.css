@@ -1,0 +1,32 @@
+/* Lightweight 3D accents, isolated from existing entrance animations. */
+.hero-image-wrapper{perspective:1000px;isolation:isolate}
+.portrait-orbits{position:absolute;width:115%;max-width:450px;aspect-ratio:1;pointer-events:none;z-index:-1;transform-style:preserve-3d;animation:orbitFloat 12s ease-in-out infinite}
+.portrait-orbits span{position:absolute;inset:0;border:1px solid rgba(56,178,172,.45);border-radius:50%;transform:rotateX(68deg) rotateY(-20deg);box-shadow:0 0 20px rgba(56,178,172,.1)}
+.portrait-orbits span:nth-child(2){inset:8%;border-color:rgba(168,85,247,.5);transform:rotateX(30deg) rotateY(65deg)}
+.portrait-orbits span:nth-child(3){inset:2%;transform:rotateX(-55deg) rotateY(35deg)}
+.portrait-orbits span::after{content:'';position:absolute;top:15%;left:12%;width:9px;height:9px;background:#59ddd2;border-radius:50%;box-shadow:0 0 18px #38b2ac}
+.hero-depth-grid{position:absolute;inset:auto -30% -190px;height:420px;background-image:linear-gradient(rgba(56,178,172,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.12) 1px,transparent 1px);background-size:65px 65px;transform:perspective(550px) rotateX(62deg);mask-image:linear-gradient(transparent,#000 45%,transparent);pointer-events:none;animation:gridDrift 14s linear infinite}
+@keyframes orbitFloat{0%,100%{transform:rotateZ(-12deg) rotateY(-12deg)}50%{transform:rotateZ(18deg) rotateY(20deg)}}
+@keyframes gridDrift{to{background-position:0 65px,0 65px}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .project-card.depth-active{transform:perspective(1000px) rotateX(var(--depth-x,0deg)) rotateY(var(--depth-y,0deg)) translateY(-5px);transition:transform .18s ease-out,box-shadow .3s ease;transition-delay:0s!important;box-shadow:0 22px 45px rgba(0,0,0,.3)}
+}
+@media(max-width:640px){.portrait-orbits{width:290px}.hero-depth-grid{opacity:.5}}
+@media(prefers-reduced-motion:reduce){.portrait-orbits,.hero-depth-grid{animation:none}.portrait-orbits{opacity:.5}}
+
+/* Full-page Three.js world and spatial content layers. */
+.world-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.65}
+body{background:#0b1020}
+.world-ready .particle-canvas,.world-ready .hero-blob-container,.world-ready .hero-blob-css{display:none}
+.section{position:relative;z-index:1;perspective:1200px;background:transparent}
+.section-alt{background:rgba(11,16,32,.35)}
+.section>.container{transform-style:preserve-3d}
+.card,.project-card{background:rgba(18,26,47,.88);backdrop-filter:blur(12px);border-color:rgba(119,173,196,.18)}
+.project-card{perspective:900px}
+.project-info{transform-origin:center;transform-style:preserve-3d}
+.hero-content{background:radial-gradient(ellipse,rgba(11,16,32,.8),transparent 75%)}
+.hero-image-ring{box-shadow:0 25px 80px #050916,0 0 55px rgba(56,178,172,.25)}
+.section-header{padding:1rem 0}.section-title{font-size:clamp(2rem,4vw,3.4rem)}
+.footer{background:rgba(11,16,32,.92)}
+@media(max-width:768px){.world-canvas{opacity:.25}.card,.project-card{backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){.world-canvas{opacity:.2}}
