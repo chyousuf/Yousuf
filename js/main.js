@@ -289,38 +289,10 @@
       }
     });
     if (!valid) return;
-    var btn = form.querySelector('.btn-primary');
-    var originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
-    btn.style.background = 'var(--accent-400)';
-    btn.style.borderColor = 'var(--accent-400)';
-    setTimeout(function () {
-      btn.innerHTML = originalHTML;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      form.reset();
-    }, 2500);
+    var subject = document.getElementById('subject').value.trim() || 'Website enquiry';
+    var body = 'Name: ' + document.getElementById('name').value.trim() + '\nEmail: ' + document.getElementById('email').value.trim() + '\n\n' + document.getElementById('message').value.trim();
+    window.location.href = 'mailto:ch.yousuf.javaid@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
-
-  /* ===== Newsletter Form ===== */
-  var newsletterForm = document.getElementById('newsletter-form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var input = newsletterForm.querySelector('.footer-newsletter-input');
-      var btn = newsletterForm.querySelector('.footer-newsletter-btn');
-      if (!input.value.trim()) {
-        input.classList.add('form-shake');
-        setTimeout(function () { input.classList.remove('form-shake'); }, 500);
-        return;
-      }
-      btn.innerHTML = '<i class="fa-solid fa-check"></i>';
-      input.value = '';
-      setTimeout(function () {
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>';
-      }, 2000);
-    });
-  }
 
   /* ===== Staggered scroll-reveal delays ===== */
   document.querySelectorAll('.skills-grid .scroll-reveal, .projects-grid .scroll-reveal, .timeline .scroll-reveal, .education-grid .scroll-reveal').forEach(function (el, i) {
@@ -415,7 +387,7 @@
   /* ===== SLOT MACHINE COUNTER for "7+ Years" ===== */
   var badgeEl = document.getElementById('badge-counter');
   if (badgeEl) {
-    var targetNum = 7;
+    var targetNum = 8;
     var slotStarted = false;
 
     function buildSlotReel() {
