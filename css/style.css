@@ -197,7 +197,7 @@ ul{list-style:none}
 .timeline{position:relative;padding:2rem 0}
 .timeline-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,var(--accent-400),var(--secondary-900),#a855f7,transparent);transform:translateX(-50%)}
 .timeline-item{position:relative;width:50%;padding:0 2.5rem 3rem}
-.timeline-left{padding-right:3rem;text-align:right}
+.timeline-left{padding-right:3rem;text-align:left}
 .timeline-right{margin-left:50%;padding-left:3rem}
 .timeline-dot{position:absolute;top:1.5rem;width:14px;height:14px;background:var(--accent-400);border-radius:50%;border:3px solid var(--primary-900);z-index:2;animation:dotPing 3s var(--ease-out-quart) infinite;will-change:box-shadow}
 @keyframes dotPing{0%,100%{box-shadow:0 0 0 0 rgba(56,178,172,.4)}50%{box-shadow:0 0 0 10px rgba(56,178,172,0)}}
@@ -210,8 +210,8 @@ ul{list-style:none}
 .exp-bullets{margin-bottom:1rem}
 .exp-bullets li{position:relative;padding-left:1.25rem;margin-bottom:.4rem;font-size:.88rem;color:var(--text-70);line-height:1.5}
 .exp-bullets li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;background:var(--accent-400);border-radius:50%}
-.timeline-left .exp-bullets li{padding-left:0;padding-right:1.25rem;text-align:right}
-.timeline-left .exp-bullets li::before{left:auto;right:0}
+.timeline-left .exp-bullets li{padding-left:1.25rem;padding-right:0;text-align:left}
+.timeline-left .exp-bullets li::before{left:0;right:auto}
 
 /* ===== EDUCATION ===== */
 .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto}
